@@ -26,7 +26,7 @@ app.options('*', cors());  // enable pre-flight
 app.use('api/folders', folderRouter);
 app.use('api/notes', noteRouter);
 
-app.get('/', (req, res,next) => {
+app.get('/', cors(), (req, res,next) => {
   const knexInstance = req.app.get('db');
   notesService.getAllNotes(knexInstance)
     .then(notes => {

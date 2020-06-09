@@ -29,7 +29,6 @@ noteRouter
   .post(bodyParser, (req, res, next) => {
     const { name, content, folderId } = req.body;
     const newNote = { name, content, folder_id : folderId};
-    console.log(folder_id, newNote)
     notesService
       .insertNote(req.app.get("db"), newNote)
       .then((note) => {

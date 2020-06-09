@@ -19,7 +19,7 @@ const serializeNote = note => ({
 });
 
 folderRouter
-  .route('/api/folders')
+  .route('/')
   .options(cors())
   .get((req,res,next) => {
     const knexInstance = req.app.get('db');

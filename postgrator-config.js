@@ -11,6 +11,7 @@ const setDatabaseUrl = (env) => {
     return process.env.TEST_DATABASE_URL;
   }
 };
+console.log(process.env.TEST_DATABASE_URL, "test DB URL")
 
 module.exports = {
   "migrationDirectory": "migrations",

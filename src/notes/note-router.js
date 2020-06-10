@@ -43,7 +43,7 @@ noteRouter
       });
   });
 noteRouter  
-  .route('/api/note/:id')
+  .route('/:id')
   .all((req,res,next)=>{
     notesService.getById(
       req.app.get('db'),
